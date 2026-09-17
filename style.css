@@ -1,0 +1,233 @@
+
+/* Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f1e7;
+    color: #4b3425;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #fffaf2;
+}
+
+.logo {
+    color: #6b4226;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4b3425;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #a47551;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Landing Page */
+.home {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    gap: 40px;
+}
+
+.home-text {
+    max-width: 550px;
+}
+
+.intro {
+    color: #a47551;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.home h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.home h3 {
+    color: #9b6b43;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    line-height: 1.8;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #6b4226;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: #9b6b43;
+}
+
+/* Foto Profil */
+.home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 150px 150px 20px 20px;
+    border: 8px solid #fffaf2;
+    box-shadow: 0 8px 20px #00000020;
+}
+
+/* Pendidikan dan Project */
+.pendidikan,
+.project {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.pendidikan {
+    background-color: #fffaf2;
+}
+
+.judul {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.education-list,
+.project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.education-card,
+.project-card {
+    background-color: #f8f1e7;
+    padding: 25px;
+    border-radius: 12px;
+    width: 230px;
+    box-shadow: 0 4px 10px #00000010;
+}
+
+.education-card h3,
+.project-card h3 {
+    color: #8b5e3c;
+    margin-bottom: 15px;
+}
+
+.education-card p,
+.project-card p {
+    line-height: 1.6;
+}
+
+.education-card span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #8b735f;
+}
+
+/* Footer */
+footer {
+    background-color: #6b4226;
+    color: #fffaf2;
+    text-align: center;
+    padding: 35px 15px;
+    line-height: 1.8;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Tampilan HP dan Tablet */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 8%;
+        background-color: #fffaf2;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px #00000020;
+        z-index: 10;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 8%;
+        gap: 30px;
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 250px;
+    }
+
+    .judul {
+        font-size: 26px;
+    }
+
+    .education-card,
+    .project-card {
+        width: 100%;
+    }
+}
